@@ -140,14 +140,13 @@ class ElementProperty(BaseFeaturizer):
             stats = ["minimum", "maximum", "range", "mean", "avg_dev", "mode"]
 
         elif preset_name == "deml":
-            data_source = "deml"
+            data_source = "magpie"
             stats = ["minimum", "maximum", "range", "mean", "std_dev"]
-            features = ["atom_num", "atom_mass", "row_num", "col_num",
-                        "atom_radius", "molar_vol", "heat_fusion",
-                        "melting_point", "boiling_point", "heat_cap",
-                        "first_ioniz", "electronegativity",
-                        "electric_pol", "GGAU_Etot", "mus_fere",
-                        "FERE correction"]
+            features = ["Number", "Mass", "Row", "Column",
+                        "AtomicRadius", "MolarVolume", "HeatFusion",
+                        "MeltingT", "BoilingT", "HeatCapacityMolar",
+                        "FirstIonizationEnergy", "Electronegativity",
+                        "DipolePolarizability", "GSenergy_pa", "MUS_fere"]
 
         elif preset_name == "matminer":
             data_source = "pymatgen"
